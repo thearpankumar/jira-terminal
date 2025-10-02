@@ -333,7 +333,6 @@ pub fn get_transitions(project_code: String) -> json::JsonValue {
 /// ```
 /// assert!(transition_exists("ABC".to_string(), "in progress".to_string()));
 /// ```
-
 pub fn transition_exists(project_code: String, transition_name: String) -> bool {
     let config_value = &parse_config()["transitions"][project_code][transition_name];
     !config_value.is_null()
